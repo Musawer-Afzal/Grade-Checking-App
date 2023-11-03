@@ -30,20 +30,17 @@
 
             if(Percentage >= 80){
                 Grade = "Your Grade is: A+";
-            }else{
-                if(Percentage >= 70){
-                Grade = "Your Grade is: A";
-            }else{
-                if(Percentage >= 60){
+            }else if(Percentage >= 70){
+                Grade = "Your Grade is: A"; 
+            }
+            else if(Percentage >= 60){
                 Grade = "Your Grade is: B";
-            }else{
-                if(Percentage >= 50){
+            }
+            else if(Percentage >= 50){
                 Grade = "Your Grade is: C";
-            }else{
+            }
+            else{
                 Grade = "Your Grade is: F";
-            }
-            }
-            }
             }
             
             document.querySelector("#resultWindow").innerHTML = Grade;
