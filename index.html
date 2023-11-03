@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grade Checking App</title>
+    <link rel="stylesheet" href="./style.css" class="css">
+</head>
+<body>
+   <div class="container"> 
+       <div class="grade-check">
+          <h1>Grade Checking App</h1><br>
+       </div>
+      <form onsubmit="GradeCheck(event)">
+          <div class="input">
+            <h3>Enter your Percentage: <input type="number" id="Percent" required step="0.01"></h3>
+          </div>
+         <button>Check</button>
+      </form><br>
+    
+      <h1 id="resultWindow"></h1>
+    </div>
+      <script>
+        function GradeCheck(event){
+            event.preventDefault();
+
+            let Percentage = document.querySelector("#Percent").value;
+
+            let Grade = "";
+
+            if(Percentage >= 80){
+                Grade = "Your Grade is: A+";
+            }else{
+                if(Percentage >= 70){
+                Grade = "Your Grade is: A";
+            }else{
+                if(Percentage >= 60){
+                Grade = "Your Grade is: B";
+            }else{
+                if(Percentage >= 50){
+                Grade = "Your Grade is: C";
+            }else{
+                Grade = "Your Grade is: F";
+            }
+            }
+            }
+            }
+            
+            document.querySelector("#resultWindow").innerHTML = Grade;
+        }
+    </script>
+</body>
+</html>
